@@ -84,7 +84,7 @@ class ShowsScreen extends HookConsumerWidget {
                     children: [
                       //Date Title
                       Text(
-                        'Select a date',
+                        'Chọn ngày',
                         style: context.headline5.copyWith(
                           height: 1,
                           color: Constants.textGreyColor,
@@ -113,7 +113,7 @@ class ShowsScreen extends HookConsumerWidget {
 
                       //Time Title
                       Text(
-                        'Select a time',
+                        'Chọn thời gian',
                         style: context.headline5.copyWith(
                           height: 1,
                           color: Constants.textGreyColor,
@@ -142,7 +142,7 @@ class ShowsScreen extends HookConsumerWidget {
 
                       //Seats details title
                       Text(
-                        'Show details',
+                        'Chi tiết',
                         style: context.headline5.copyWith(
                           height: 1,
                           color: Constants.textGreyColor,
@@ -173,7 +173,7 @@ class ShowsScreen extends HookConsumerWidget {
                               gradient: Constants.buttonGradientOrange,
                               child: const Center(
                                 child: Text(
-                                  'CONTINUE',
+                                  'Tiếp tục',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,

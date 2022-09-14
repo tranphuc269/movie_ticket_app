@@ -97,7 +97,7 @@ class AuthProvider extends StateNotifier<AuthState> {
     UserRole role = UserRole.API_USER,
   }) async {
     if (contact.startsWith('0')) contact = contact.substring(1);
-    contact = '+92$contact';
+    contact = '+84$contact';
     final user = UserModel(
       userId: null,
       fullName: fullName,
@@ -109,7 +109,14 @@ class AuthProvider extends StateNotifier<AuthState> {
     state = const AuthState.authenticating();
     try {
       _currentUser = await _authRepository.sendRegisterData(
-        data: user.toJson(),
+        data: <String, dynamic>{
+          'full_name': fullName,
+          'email': email,
+          'address': address,
+          'contact': contact,
+          'role': role,
+          'password': password
+        },
         updateTokenCallback: updateToken,
       );
       state = AuthState.authenticated(fullName: _currentUser!.fullName);

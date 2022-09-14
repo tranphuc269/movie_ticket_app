@@ -37,6 +37,7 @@ class AuthRepository {
       data: data,
       requiresAuthToken: false,
       converter: (response) {
+        print('response : ${response}');
         updateTokenCallback(response['body']['token'] as String);
         data['user_id'] = response['body']['user_id'];
         return UserModel.fromJson(data);

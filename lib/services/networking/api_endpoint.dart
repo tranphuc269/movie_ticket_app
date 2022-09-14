@@ -20,7 +20,7 @@ class ApiEndpoint {
   /// ```
   static const baseUrl = String.fromEnvironment(
     'BASE_URL',
-    defaultValue: 'localhost:3000/api/v1',
+    defaultValue: 'https://182e-2402-800-61b1-2e57-7531-678d-8a22-9fd6.ap.ngrok.io/api/v1',
   );
 
   /// Returns the path for an authentication [endpoint].
